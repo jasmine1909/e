@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
+
+:root {
+    --transition: all 0.7s ease;
+    --lightyellow: #F7F2EB;
+    --border-color: darkgrey;
+    --orange: #F95A37;
+    --dark-color: #2D242E;
+    --biggest-font: 2.25rem;
+    --h1-font: 1.5rem;
+    --h2-font: 1.25rem;
+    --h3-font: 1rem;
+    --normal-font: 0.9rem;
+    --small-font: 0.8rem;
+
+}
+
+@media screen and(min-width:1024px) {
+    :root {
+        --biggest-font: 4rem;
+        --h1-font: 2.25rem;
+        --h2-font: 1.5rem;
+        --h3-font: 1.25rem;
+        --small-font: 1rem;
+
+    }
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+.py {
+    padding-top: 2rem
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+}
+
+.site-name img {
+    width: 80px;
+
+}
+
+.site-nav {
+    font-size: 35px;
+    color: #585242;
+}
+
+.btn {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 140px;
+    display: block;
+    margin: 15px auto;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 8px 0;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+@media(max-width: 500px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* header */
+.header {
+
+    min-height: 100vh;
+    color: #fff;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+
+
+
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 0 1rem;
+    ;
+}
+
+.bg-vid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1
+}
+
+.head-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head-top span {
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: var(--transition);
+}
+
+.head-top span:hover {
+    color: var(--yellow);
+}
+
+.head-bottom {
+    flex: 1;
+    text-align: center;
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.head-bottom h2 {
+    padding: 22px 0;
+    font-size: 45px;
+    border-bottom: 1px solid #fff;
+}
+
+.head-bottom p {
+    opacity: 0.7;
+    font-size: 20px;
+    margin: 45px auto;
+    width: 60vw;
+}
+
+.head-btn {
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+    border: 3px solid #fff;
+    background: transparent;
+    padding: 13px 20px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.head-btn:hover {
+    background: transparent;
+}
+
+
+/* side nav */
+.sidenav {
+    background: var(--dark);
+    color: #fff;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -100%;
+    width: 300px;
+    padding: 20px;
+    transition: var(--transition);
+    z-index: 10;
+}
+
+/********/
+.sidenav.show {
+    right: 0;
+}
+
+/*************/
+.cancel-btn {
+    position: absolute;
+    right: 25px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.cancel-btn:hover {
+    opacity: 0.7;
+}
+
+.navbar {
+    margin-top: 50px;
+    list-style: none;
+    padding: 12px;
+}
+
+.navbar li a {
+    color: #fff;
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 15px 0;
+    display: block;
+    border-bottom: 0.5px solid rgba(249, 211, 66, 0.3);
+    opacity: 0.8;
+    letter-spacing: 1.5px;
+    transition: var(--transition);
+}
+
+.navbar li a:hover {
+    padding-left: 12px;
+}
+
+@media(max-width: 400px) {
+    .sidenav {
+        width: 100vw;
+    }
+}
+
+/*banner*/
+.nav-active {
+    background-color: rgb(21, 19, 19);
+    ;
+}
+
+.container {
+    padding: 2rem;
+    width: 90vw;
+}
+
+.banner {
+    background-color: blue;
+    height: 1000px;
+    ;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+    grid-gap: 3rem;
+}
